@@ -207,7 +207,7 @@ $ python3 data/create_lmdb_dataset.py
 
 ### 커맨드
 ```bash
-CUDA_VISIBLE_DEVICES=0 python3 train.py 
+$ CUDA_VISIBLE_DEVICES=0 python3 train.py 
   --train_data ../data/data_lmdb_release/training 
   --valid_data ../data/data_lmdb_release/validation 
   --select_data basic-skew 
@@ -290,7 +290,7 @@ $ CUDA_VISIBLE_DEVICES=0 python3 deep-text-recognition-benchmark/test.py
 - 학습 시에 같은 모듈을 사용했더라도 설정한 옵션에 따라 accuracy와 loss가 다를 수 있다. 학습한 모델 중 데모를 시도할 모델은 `--saved_model` 옵션으로 지정할 수 있다.
 ### 커맨드
 ```bash
-! CUDA_VISIBLE_DEVICES=0 python3 deep-text-recognition-benchmark/demo.py 
+$ CUDA_VISIBLE_DEVICES=0 python3 deep-text-recognition-benchmark/demo.py 
   --Transformation TPS 
   --FeatureExtraction VGG 
   --SequenceModeling None 
