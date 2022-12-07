@@ -207,6 +207,7 @@ $ python3 data/create_lmdb_dataset.py
 
 ### 커맨드
 ```bash
+$ cd deep-text-recognition-benchmark
 $ CUDA_VISIBLE_DEVICES=0 python3 train.py 
   --train_data ../data/data_lmdb_release/training 
   --valid_data ../data/data_lmdb_release/validation 
