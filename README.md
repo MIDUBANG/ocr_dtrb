@@ -19,13 +19,13 @@ $ sh generate_data_5type_test.sh
      ├── basic
      │     ├── [이미지 파일명]
      │     └──  ...
-     └── skew   
+     ├── skew   
      │     ├── [이미지 파일명]
      │     └──  ...
-     └── blur   
+     ├── blur   
      │     ├── [이미지 파일명]
      │     └──  ...
-     └── back   
+     ├── back   
      │     ├── [이미지 파일명]
      │     └──  ...
      └── dist   
@@ -261,7 +261,7 @@ train.py의 옵션을 커스텀해 학습 가능하다.
 - test 과정을 진행하고 싶다면 1~3단계에서 테스트 데이터도 생성/가공하면 된다.
   
 ### 커맨드
-```bash
+```shell script
 $ CUDA_VISIBLE_DEVICES=0 python3 deep-text-recognition-benchmark/test.py 
   --eval_data data/data_lmdb_release/evaluation 
   --benchmark_all_eval 
@@ -290,15 +290,19 @@ $ CUDA_VISIBLE_DEVICES=0 python3 deep-text-recognition-benchmark/test.py
 - `--Transformation`, `--FeatureExtraction`, `--SequenceModeling`, `--Prediction` 옵션을 이용해 각 스테이지에서 사용할 모듈을 결정한다. 
 - 학습 시에 같은 모듈을 사용했더라도 설정한 옵션에 따라 accuracy와 loss가 다를 수 있다. 학습한 모델 중 데모를 시도할 모델은 `--saved_model` 옵션으로 지정할 수 있다.
 ### 커맨드
-```bash
-$ CUDA_VISIBLE_DEVICES=0 python3 deep-text-recognition-benchmark/demo.py 
-  --Transformation TPS 
-  --FeatureExtraction VGG 
-  --SequenceModeling None 
-  --Prediction CTC 
-  --image_folder data/generator/TextRecognitionDataGenerator/out/test  
-  --saved_model deep-text-recognition-benchmark/saved_models/TPS-VGG-None-CTC-Seed1111/best_accuracy.pth;
+```shell script
+$ CUDA_VISIBLE_DEVICES=0 python3 demo.py 
+  --Transformation TPS   
+  --FeatureExtraction VGG   
+  --SequenceModeling None   
+  --Prediction CTC  
+  --image_folder ../data/generator/TextRecognitionDataGenerator/out/basic   
+  --saved_model saved_models/Test-TPS-VGG-None-CTC-Seed/best_accuracy.pth;
 ```
+saved_models 디렉토리에 학습시킨 모델 중 가장 정확도 높았던 모델을  첨부해두었다. 
+위의 예시는 해당 모델을 이용한 데모이다. 
+직접 학습시킨 다른 모델로도 가능하다.
+
 
 # Acknowledgements
 [deep-text-recognition-benchmark](https://github.com/clovaai/deep-text-recognition-benchmark) , [TextRecognitionDataGenerator](https://github.com/Belval/TextRecognitionDataGenerator)
