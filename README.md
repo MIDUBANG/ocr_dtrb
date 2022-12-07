@@ -1,6 +1,8 @@
 # ocr_dtrb
 deep-text-recognition-benchmark를 이용한 OCR 사용자모델 학습
 
+dependency : torch, lmdb, torchvision, nltk, natsort, pillow, requests, opencv-python, tqdm, fire (use `pip install [library]` command)
+
 # 1. 문장 데이터 생성
 
 ### TextRecognitionDataGenerator
