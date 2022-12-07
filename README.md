@@ -299,3 +299,6 @@ $ CUDA_VISIBLE_DEVICES=0 python3 deep-text-recognition-benchmark/demo.py
   --image_folder data/generator/TextRecognitionDataGenerator/out/test  
   --saved_model deep-text-recognition-benchmark/saved_models/TPS-VGG-None-CTC-Seed1111/best_accuracy.pth;
 ```
+
+# Acknowledgement
+[deep-text-recognition-benchmark](https://github.com/clovaai/deep-text-recognition-benchmark) , [TextRecognitionDataGenerator](https://github.com/Belval/TextRecognitionDataGenerator)
