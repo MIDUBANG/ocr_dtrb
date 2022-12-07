@@ -262,19 +262,20 @@ train.py의 옵션을 커스텀해 학습 가능하다.
   
 ### 커맨드
 ```shell script
-$ CUDA_VISIBLE_DEVICES=0 python3 deep-text-recognition-benchmark/test.py 
-  --eval_data data/data_lmdb_release/evaluation 
+$ CUDA_VISIBLE_DEVICES=0 python3 test.py 
+  --eval_data ../data/data_lmdb_release/evaluation 
   --benchmark_all_eval 
   --Transformation TPS 
   --FeatureExtraction VGG 
   --SequenceModeling None 
   --Prediction CTC 
-  --saved_model deep-text-recognition-benchmark/saved_models/TPS-VGG-None-CTC-Seed111/best_accuracy.pth 
+  --saved_model saved_models/Test-TPS-VGG-None-CTC-Seed/best_accuracy.pth 
   --data_fil1tering_off 
   --workers 2 
   --batch_size 128 
   --imgW 400;
 ```
+위 커맨드는 테스트 문장데이터로 lmdb 데이터셋을 생성하여 data_lmdb_release/evaluation 경로로 저장했다고 가정했다. 가장 정확도가 높았던 학습 모델인 Test-TPS-VGG-None-CTC-Seed를 첨부해두었다. 해당 모델을을 테스트에 사용했다. 직접 학습시켜 새롭게 저장된 모델도 사용할 수 있다.
 
 <br>
 
@@ -284,11 +285,15 @@ $ CUDA_VISIBLE_DEVICES=0 python3 deep-text-recognition-benchmark/test.py
 - `--benchmark_all_eval` : evaluate 3 benchmark evaluation datasets
 - `--saved_model` : path to saved_model to evaluation
 
+<br>
 
 # 6. 학습 모델 데모
 
 - `--Transformation`, `--FeatureExtraction`, `--SequenceModeling`, `--Prediction` 옵션을 이용해 각 스테이지에서 사용할 모듈을 결정한다. 
 - 학습 시에 같은 모듈을 사용했더라도 설정한 옵션에 따라 accuracy와 loss가 다를 수 있다. 학습한 모델 중 데모를 시도할 모델은 `--saved_model` 옵션으로 지정할 수 있다.
+
+<br>
+
 ### 커맨드
 ```shell script
 $ CUDA_VISIBLE_DEVICES=0 python3 demo.py 
@@ -303,6 +308,7 @@ saved_models 디렉토리에 학습시킨 모델 중 가장 정확도 높았던 
 위의 예시는 해당 모델을 이용한 데모이다. 
 직접 학습시킨 다른 모델로도 가능하다.
 
+<br>
 
 # Acknowledgements
 [deep-text-recognition-benchmark](https://github.com/clovaai/deep-text-recognition-benchmark) , [TextRecognitionDataGenerator](https://github.com/Belval/TextRecognitionDataGenerator)
