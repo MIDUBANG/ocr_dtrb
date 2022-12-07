@@ -297,7 +297,9 @@ $ CUDA_VISIBLE_DEVICES=0 python3 test.py
   --batch_size 128 
   --imgW 400;
 ```
-위 커맨드는 테스트 문장데이터로 lmdb 데이터셋을 생성하여 data_lmdb_release/evaluation 경로로 저장했다고 가정했다. 가장 정확도가 높았던 학습 모델인 Test-TPS-VGG-None-CTC-Seed를 첨부해두었다. 해당 모델을을 테스트에 사용했다. 직접 학습시켜 새롭게 저장된 모델도 사용할 수 있다.
+- 위 커맨드는 테스트 문장데이터로 lmdb 데이터셋을 생성하여 data_lmdb_release/evaluation 경로로 저장했다고 가정했다. 
+- 가장 정확도가 높았던 학습 모델인 Test-TPS-VGG-None-CTC-Seed를 테스트에 사용했다. 다운로드 받아 사용해볼 수 있다. (용량이 커 구글 드라이브로 첨부) [Test-TPS-VGG-None-CTC-Seed](https://drive.google.com/file/d/16JvCdkkEKum7CaFH4TkAVu1YWMC3NQ9_/view?usp=sharing)
+- 직접 학습시켜 새롭게 저장된 모델도 사용할 수 있다.
 
 <br>
 
