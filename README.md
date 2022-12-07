@@ -291,6 +291,7 @@ $ CUDA_VISIBLE_DEVICES=0 python3 test.py
 
 - `--Transformation`, `--FeatureExtraction`, `--SequenceModeling`, `--Prediction` 옵션을 이용해 각 스테이지에서 사용할 모듈을 결정한다. 
 - 학습 시에 같은 모듈을 사용했더라도 설정한 옵션에 따라 accuracy와 loss가 다를 수 있다. 학습한 모델 중 데모를 시도할 모델은 `--saved_model` 옵션으로 지정할 수 있다.
+- `--image_folder` 옵션으로 데모 쓰일 디렉토리 경로를 지정한다.
 
 <br>
 
@@ -301,12 +302,14 @@ $ CUDA_VISIBLE_DEVICES=0 python3 demo.py
   --FeatureExtraction VGG   
   --SequenceModeling None   
   --Prediction CTC  
-  --image_folder ../data/generator/TextRecognitionDataGenerator/out/basic   
+  --image_folder ../data/demo_image   
   --saved_model saved_models/Test-TPS-VGG-None-CTC-Seed/best_accuracy.pth;
 ```
-saved_models 디렉토리에 학습시킨 모델 중 가장 정확도 높았던 모델을  첨부해두었다. 
-위의 예시는 해당 모델을 이용한 데모이다. 
-직접 학습시킨 다른 모델로도 가능하다.
+- saved_models 디렉토리에 학습시킨 모델 중 가장 정확도 높았던 모델을  첨부해두었다. 위의 예시는 해당 모델을 이용한 데모이다. 직접 학습시킨 다른 모델로도 가능하다.
+- 데모를 위해 나눔고딕, 맑은 고딕, 굴림 폰트가 사용된 문장 이미지 데이터를 data/demo_image 디렉토리에 첨부해두었다. 다른 문장 이미지로도 가능하다. 
+
+
+
 
 <br>
 
