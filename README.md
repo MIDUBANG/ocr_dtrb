@@ -203,7 +203,7 @@ $ python3 data/create_lmdb_dataset.py
 <br>
 
 # 4. 사용자 모델 학습(training)
-
+여기서부턴 gpu 환경에서만 가능하다.
 
 ### 커맨드
 ```bash
