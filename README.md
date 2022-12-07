@@ -3,6 +3,16 @@ deep-text-recognition-benchmark를 이용한 OCR 사용자모델 학습
 
 # 1. 문장 데이터 생성
 
+### TextRecognitionDataGenerator
+- 다양한 노이즈를 포함하는 문장 생성을 돕는 오픈소스
+- 단어 데이터셋에서 무작위로 10개의 단어를 뽑아 띄어쓰기 포함하여 조합하도록 하였다.
+- 다음과 같은 종류의 문장 생성
+1) 기본 9천개
+2) 배경 조정 3천개
+3) 기울기 조정 9천개
+4) 블러 조정 3천개
+5) 왜곡 조정 3천개
+
 ### 실행 커맨드
 ```bash
 $ cd data/generator/TextRecognitionDataGenerator
@@ -11,6 +21,16 @@ $ sh generate_data_5type_test.sh
 위 커맨드 실행시 ocr_dtrb/data/generator/TextRecognitionDataGenerator/out 경로에 5가지 유형의 데이터가 생성된다.
 
 <br>
+
+### 문장 생성에 사용한 데이터
+1.  단어 데이터 
+- 국립국어원 한국어 학습용 어휘목록(단어 5965개, 글자 974개)
+-  법무부 생활법률지식 데이터 (단어 287개)
+
+2. 폰트 데이터 
+- 네이버 나눔글꼴 23종
+- 네이버 나눔손글씨 109종
+
 <br>
 
 ### 데이터 생성 디렉토리 구조
