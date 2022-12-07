@@ -325,7 +325,9 @@ $ CUDA_VISIBLE_DEVICES=0 python3 demo.py
   --image_folder ../data/demo_image   
   --saved_model saved_models/Test-TPS-VGG-None-CTC-Seed/best_accuracy.pth;
 ```
-- saved_models 디렉토리에 학습시킨 모델 중 가장 정확도 높았던 모델을  첨부해두었다. 위의 예시는 해당 모델을 이용한 데모이다. 직접 학습시킨 다른 모델로도 가능하다.
+- saved_models 디렉토리에 학습시킨 모델 중 가장 정확도 높았던 모델을  다운로드 받아 사용해볼 수 있다. (용량이 커 구글 드라이브로 첨부) [Test-TPS-VGG-None-CTC-Seed](https://drive.google.com/file/d/16JvCdkkEKum7CaFH4TkAVu1YWMC3NQ9_/view?usp=sharing)
+- 위의 예시는 해당 모델을 이용한 데모이다. 직접 학습시킨 다른 모델로도 가능하다.
+
 - 데모를 위해 나눔고딕, 맑은 고딕, 굴림 폰트가 사용된 문장 이미지 데이터를 data/demo_image 디렉토리에 첨부해두었다. 다른 문장 이미지로도 가능하다. 
 
 
